@@ -31,8 +31,7 @@ public class LASER : MonoBehaviour
 
             if (hit.transform.tag == "Button") // 버튼에 레이저포인터 갖다대면
             {
-                hit.transform.GetComponent<UIMachanism_indivisuals>().CursorIsOn = true;
-                Debug.Log(hit.transform.GetComponent<UIMachanism_indivisuals>().CursorIsOn);
+                hit.transform.GetComponent<UIMachanism>().CursorIsOn = true;
                 LastHitObject = hit.transform.gameObject;
             }
             else if (hit.transform.tag == "Audience") // 청중에 레이저포인터 갖다대면
@@ -41,7 +40,7 @@ public class LASER : MonoBehaviour
             }
             else if (LastHitObject != null)
             {
-                LastHitObject.transform.GetComponent<UIMachanism_indivisuals>().CursorIsOn = false;
+                LastHitObject.transform.GetComponent<UIMachanism>().CursorIsOn = false;
             }
         }
         else
@@ -49,7 +48,7 @@ public class LASER : MonoBehaviour
             endPos = startPos + (transform.forward * MaxDist);
             if (LastHitObject != null)
             {
-                LastHitObject.transform.GetComponent<UIMachanism_indivisuals>().CursorIsOn = false;
+                LastHitObject.transform.GetComponent<UIMachanism>().CursorIsOn = false;
             }
         }
 
