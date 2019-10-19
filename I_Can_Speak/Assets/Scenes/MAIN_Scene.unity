@@ -371,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &158998967
 Transform:
   m_ObjectHideFlags: 0
@@ -414,8 +414,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353446134}
   m_LocalRotation: {x: 0.13052624, y: -0.000000036662247, z: -0.9914449, w: 0.0000002784773}
-  m_LocalPosition: {x: -7, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 2}
+  m_LocalPosition: {x: -10, y: 0, z: -1}
+  m_LocalScale: {x: 8, y: 5, z: 2}
   m_Children:
   - {fileID: 1255231653}
   m_Father: {fileID: 1923792294}
@@ -433,9 +433,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9153601c6b106fb4185deb3929881ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Function_name: []
+  Function_name:
+  - Move
   target_Object: []
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!65 &353446137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -466,7 +492,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c85d2011d0c9783458787fc4868360ba, type: 2}
+  - {fileID: 2100000, guid: 0346a7ebe0735e546ae77363687cb68c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -523,8 +549,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435296324}
   m_LocalRotation: {x: 0.000000048602892, y: 0.70710677, z: -0.7071069, w: -0.00000003267498}
-  m_LocalPosition: {x: 0, y: -4.05, z: 8.999998}
-  m_LocalScale: {x: 2.5, y: 0.2, z: 0.45}
+  m_LocalPosition: {x: 0, y: -21.55, z: -12.499997}
+  m_LocalScale: {x: 2, y: 0.2, z: 0.35}
   m_Children: []
   m_Father: {fileID: 122483238}
   m_RootOrder: 0
@@ -601,7 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d03ca0137f226f419544bee6037b79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu_Index: {x: 1, y: 0, z: 0}
 --- !u!1 &489522895
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &489522896
 Transform:
   m_ObjectHideFlags: 0
@@ -650,7 +675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &557871837
 Transform:
   m_ObjectHideFlags: 0
@@ -680,7 +705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &589920482
 Transform:
   m_ObjectHideFlags: 0
@@ -710,7 +735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &607128359
 Transform:
   m_ObjectHideFlags: 0
@@ -739,7 +764,7 @@ GameObject:
   - component: {fileID: 614577465}
   - component: {fileID: 614577464}
   m_Layer: 0
-  m_Name: Public
+  m_Name: "\uACF5"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1210,7 +1235,7 @@ GameObject:
   - component: {fileID: 685874297}
   - component: {fileID: 685874296}
   m_Layer: 0
-  m_Name: Private
+  m_Name: "\uBE44\uACF5"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1484,7 +1509,32 @@ MonoBehaviour:
   target_Object:
   - {fileID: 711108401}
   - {fileID: 0}
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!65 &737719666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1800,7 +1850,32 @@ MonoBehaviour:
   target_Object:
   - {fileID: 662172319}
   - {fileID: 589920481}
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!65 &918326395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1913,7 +1988,32 @@ MonoBehaviour:
   target_Object:
   - {fileID: 158998966}
   - {fileID: 22455358}
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!65 &1139231140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2023,7 +2123,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c85d2011d0c9783458787fc4868360ba, type: 2}
+  - {fileID: 2100000, guid: 03058b98d26311249aa4f5958d16b594, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2085,7 +2185,80 @@ MonoBehaviour:
   target_Object:
   - {fileID: 489522895}
   - {fileID: 711108401}
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
+--- !u!1 &1189728666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189728668}
+  - component: {fileID: 1189728667}
+  m_Layer: 0
+  m_Name: MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1189728667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189728666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b64f3284fe46c345a201d02e8754444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  OnObject: {fileID: 0}
+  Function_name: []
+  target_Object: []
+--- !u!4 &1189728668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189728666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7862645, y: 18.375002, z: -10.67618}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197818109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,7 +2273,7 @@ GameObject:
   - component: {fileID: 1197818112}
   - component: {fileID: 1197818111}
   m_Layer: 0
-  m_Name: START
+  m_Name: 003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2143,7 +2316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: START
+  m_text: 003
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2303,7 +2476,7 @@ GameObject:
   - component: {fileID: 1255231655}
   - component: {fileID: 1255231654}
   m_Layer: 0
-  m_Name: START
+  m_Name: 001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2346,7 +2519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: START
+  m_text: 001
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2506,7 +2679,7 @@ GameObject:
   - component: {fileID: 1351120594}
   - component: {fileID: 1351120593}
   m_Layer: 0
-  m_Name: Records
+  m_Name: "\uB179"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2709,7 +2882,7 @@ GameObject:
   - component: {fileID: 1419274327}
   - component: {fileID: 1419274326}
   m_Layer: 0
-  m_Name: START
+  m_Name: "\uC2DC\uC791"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2752,7 +2925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: START
+  m_text: "\uC2DC\uC791"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2963,7 +3136,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08daf4d0b7c5eef4a9d6983acdd77582, type: 2}
+  - {fileID: 2100000, guid: 343d542af3473c543af563663921a72b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3010,7 +3183,32 @@ MonoBehaviour:
   target_Object:
   - {fileID: 489522895}
   - {fileID: 0}
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!1 &1476886636
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,7 +3273,7 @@ Transform:
   m_GameObject: {fileID: 1503268247}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: -0.00000035762784}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 5, y: 5, z: 2}
+  m_LocalScale: {x: 8, y: 5, z: 2}
   m_Children:
   - {fileID: 1752181001}
   m_Father: {fileID: 1923792294}
@@ -3095,7 +3293,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Function_name: []
   target_Object: []
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!65 &1503268250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3126,7 +3349,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c85d2011d0c9783458787fc4868360ba, type: 2}
+  - {fileID: 2100000, guid: a0be241dda1912d4388276aaaea4975f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3239,7 +3462,32 @@ MonoBehaviour:
   target_Object:
   - {fileID: 557871836}
   - {fileID: 22455358}
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!65 &1614296363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3327,8 +3575,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645450022}
   m_LocalRotation: {x: -0.13052616, y: 0.00000003666222, z: -0.9914449, w: 0.0000002784773}
-  m_LocalPosition: {x: 7, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 2}
+  m_LocalPosition: {x: 10, y: 0, z: -1}
+  m_LocalScale: {x: 8, y: 5, z: 2}
   m_Children:
   - {fileID: 1197818110}
   m_Father: {fileID: 1923792294}
@@ -3348,7 +3596,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Function_name: []
   target_Object: []
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!65 &1645450025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3379,7 +3652,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c85d2011d0c9783458787fc4868360ba, type: 2}
+  - {fileID: 2100000, guid: 7e7916c9cbde12a4a8c513c53a1a3da9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3625,7 +3898,7 @@ GameObject:
   - component: {fileID: 1684132050}
   - component: {fileID: 1684132049}
   m_Layer: 0
-  m_Name: HELP
+  m_Name: "\uB3C4\uC6C0\uB9D0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3668,9 +3941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Help
-
-'
+  m_text: "\uB3C4\uC6C0\uB9D0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3830,7 +4101,7 @@ GameObject:
   - component: {fileID: 1752181003}
   - component: {fileID: 1752181002}
   m_Layer: 0
-  m_Name: START
+  m_Name: 002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3873,7 +4144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: START
+  m_text: 002
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4072,7 +4343,32 @@ MonoBehaviour:
   target_Object:
   - {fileID: 711108401}
   - {fileID: 1923792293}
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!65 &1826748139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4197,7 +4493,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 628070c052b0abb4cbace299cbae097a, type: 2}
+  - {fileID: 2100000, guid: 94c0571b66b84504eb384a899f57b80c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4244,7 +4540,32 @@ MonoBehaviour:
   target_Object:
   - {fileID: 489522895}
   - {fileID: 0}
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!1 &1913398344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,7 +4580,7 @@ GameObject:
   - component: {fileID: 1913398347}
   - component: {fileID: 1913398346}
   m_Layer: 0
-  m_Name: Records
+  m_Name: "\uAE30\uB85D"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4302,7 +4623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Records
+  m_text: "\uAE30\uB85D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4463,7 +4784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1923792294
 Transform:
   m_ObjectHideFlags: 0
@@ -4625,7 +4946,32 @@ MonoBehaviour:
   target_Object:
   - {fileID: 662172319}
   - {fileID: 607128358}
+  Last_DeActivatedGroup: {fileID: 0}
+  Now_ActivatedGroup: {fileID: 0}
+  Normal_Color:
+    r: 0.04
+    g: 0.04
+    b: 0.04
+    a: 0.04
+  Button_Normal_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Highlighted_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Button_Clicked_Color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  Highlight_strength: 10
+  Click_strength: 5
   CursorIsOn: 0
+  thisBtnIsStart: 0
 --- !u!65 &2113910945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4705,7 +5051,7 @@ PrefabInstance:
     - target: {fileID: 4862380284621746175, guid: 7712be869b4f54f409439048c39159f7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.04
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 4862380284621746175, guid: 7712be869b4f54f409439048c39159f7,
         type: 3}
