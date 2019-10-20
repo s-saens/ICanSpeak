@@ -12,6 +12,7 @@ public class StopWatch : MonoBehaviour
     public int minutes;
     public float GoodTime;
     public bool timerActive = false;
+    public float HodduckTime;
 
     public float GazeTime = 0;
     
@@ -20,6 +21,10 @@ public class StopWatch : MonoBehaviour
     public GameObject Mark;
     public GameObject Cam;
     public GameObject Badmark;
+    public GameObject Hodduck;
+    public GameObject HodduckText;
+
+    public GameObject Results;
 
     void Update()
     {
@@ -39,7 +44,7 @@ public class StopWatch : MonoBehaviour
         }
 
 
-        if (seconds >= 8 && GazeTime <= 5.7f)
+        if (seconds >= 8 && GazeTime <= 3.7f)
         {
             MissionText.SetActive(true);
             Mark.SetActive(true);
@@ -47,7 +52,13 @@ public class StopWatch : MonoBehaviour
         }
         else MissionText.SetActive(false);
 
-        if (GazeTime > 5.7f && GoodTime <= 3)
+        if(seconds >= 21)
+        {
+            Results.SetActive(true);
+            timerActive = false;
+        }
+
+        if (GazeTime > 3.7f && GoodTime <= 3)
         {
             MissionText.SetActive(false);
             GoodText.SetActive(true);
@@ -61,6 +72,14 @@ public class StopWatch : MonoBehaviour
             Badmark.SetActive(false);
         }
         else Badmark.SetActive(true);
+
+        if (seconds >= 14 && HodduckTime <= 3)
+        {
+            Hodduck.SetActive(true);
+            HodduckText.SetActive(true);
+            HodduckTime += Time.deltaTime;
+        }
+        else HodduckText.SetActive(false);
     }
 
 }

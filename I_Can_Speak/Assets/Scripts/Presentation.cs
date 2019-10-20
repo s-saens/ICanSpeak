@@ -36,6 +36,7 @@ public class Presentation : MonoBehaviour
                 if (TouchPosition.x > 0.5) Next();
                 else if (TouchPosition.x < -0.5) Prev();
                 else if (!loaded) FirstLoad();
+                else TIMERTEXT.GetComponent<StopWatch>().timerActive = false;
             }
         }
     }
