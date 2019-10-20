@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UIMachanism : MonoBehaviour
@@ -82,6 +83,9 @@ public class UIMachanism : MonoBehaviour
                                 Trait_Initialize();
                                 target_Object[i].SetActive(false);
                                 break;
+                            default :
+                                target_Object[i].SendMessage(Function_name[i]);
+                                break;
                         }
                     }
                 }
@@ -89,6 +93,12 @@ public class UIMachanism : MonoBehaviour
                 {
                     Trait_Initialize();
                     SceneManager.LoadScene(Function_name[0]);
+                }
+                else if(Button_type == 2) {
+                    target_Object[0].GetComponent<Text>().text = System.Convert.ToString(System.Convert.ToInt32(target_Object[0].GetComponent<Text>().text) + System.Convert.ToInt32(Function_name[0]));
+                }
+                else if(Button_type == 3) {
+                    target_Object[0].GetComponent<Text>().text = System.Convert.ToString(System.Convert.ToInt32(target_Object[0].GetComponent<Text>().text) - System.Convert.ToInt32(Function_name[0]));
                 }
                 thisBtnIsStart = false;
             }
