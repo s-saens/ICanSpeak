@@ -7,18 +7,16 @@ using TMPro;
 
 public class Presentation : MonoBehaviour
 {
-    public float timeStart = 0f;
-    public GameObject textBox;
-    
+    public GameObject TIMERTEXT;
+    public GameObject StartHelp;
+
     private Object[] textures;
     private int index = 0;
     public bool loaded = false;
     private Vector2 TouchPosition;
-    private GameObject StartHelp;
 
     private void Start()
     {
-        StartHelp = GameObject.Find("STARTG");
         textures = Resources.LoadAll("Presentation", typeof(Texture));
         foreach (var t in textures)
         {
@@ -78,6 +76,8 @@ public class Presentation : MonoBehaviour
         LOAD(0);
         loaded = true;
         StartHelp.SetActive(false);
+        TIMERTEXT.SetActive(true);
+        TIMERTEXT.GetComponent<StopWatch>().timerActive = true;
         return;
     }
 

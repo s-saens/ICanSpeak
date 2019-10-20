@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIMachanism : MonoBehaviour
 {
@@ -69,19 +70,29 @@ public class UIMachanism : MonoBehaviour
                 
                 if(Button_type == 0)
                 {
-                    for (int i = 0; i < Function_name.Length; ++i)
+                    if(this.GetComponent<Button>() != null)
                     {
-                        switch (Function_name[i])
+                        this.SendMessage("Press");
+                    }
+                    else
+                    {
+                        for (int i = 0; i < Function_name.Length; ++i)
                         {
-                            case "Activate":        //Activate
-                                Trait_Initialize();
-                                target_Object[i].SetActive(true);
-                                break;
+                            switch (Function_name[i])
+                            {
+                                case "Activate":        //Activate
+                                    Trait_Initialize();
+                                    target_Object[i].SetActive(true);
+                                    break;
 
-                            case "Deactivate":      //DeActivate
-                                Trait_Initialize();
-                                target_Object[i].SetActive(false);
-                                break;
+                                case "Deactivate":      //DeActivate
+                                    Trait_Initialize();
+                                    target_Object[i].SetActive(false);
+                                    break;
+                                default:
+                                    target_Object[i].SendMessage(Function_name[i]);
+                                    break;
+                            }
                         }
                     }
                 }
