@@ -4942,10 +4942,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9153601c6b106fb4185deb3929881ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button_type: 0
+  Button_type: 1
   Function_name:
-  - Deactivate
-  - Activate
+  - PrivateLobby_Scene
   target_Object:
   - {fileID: 711108401}
   - {fileID: 1923792293}
